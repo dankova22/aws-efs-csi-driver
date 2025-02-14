@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 
-VERSION=v2.1.5
+VERSION=v2.1.6
 
 PKG=github.com/kubernetes-sigs/aws-efs-csi-driver
 GIT_COMMIT?=$(shell git rev-parse HEAD)
@@ -47,7 +47,7 @@ ALL_OS_ARCH_OSVERSION_linux=$(foreach arch, $(ALL_ARCH_linux), $(foreach osversi
 
 ALL_OS_ARCH_OSVERSION=$(foreach os, $(ALL_OS), ${ALL_OS_ARCH_OSVERSION_${os}})
 
-PLATFORM?=linux/amd64,linux/arm64
+PLATFORM?=linux/amd64
 
 # split words on hyphen, access by 1-index
 word-hyphen = $(word $2,$(subst -, ,$1))
